@@ -1,0 +1,11 @@
+{
+  "name": "rock-paper-scissors",
+  "version": "1.0.0",
+  "dependencies": {
+    "console-table-printer": "^2.11.1",
+    "console.table": "^0.10.0",
+    "prompt-sync": "^4.2.0",
+    "prompts": "^2.4.2",
+    "random-number-csprng": "^1.0.2"
+  }
+}
