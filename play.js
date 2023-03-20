@@ -9,14 +9,14 @@ const moves = process.argv.slice(2)
 
 const play = () => {
     if (validateInput(moves)) {
-        const numberCompMove = randomInt(0, moves.length)
-        const hmac = createHmac('SHA3-256', secretKey).update(moves[numberCompMove]).digest('hex')
+        const compMove = randomInt(0, moves.length)
+        const hmac = createHmac('SHA3-256', secretKey).update(moves[compMove]).digest('hex')
         console.log(`HMAC: ${hmac}`)
         const request = getRequest(moves)
         if (+request === 0) return
         console.log(`Your move: ${moves[request - 1]}`)
-        console.log(`Computer move: ${moves[numberCompMove]}`)
-        getWinner(moves, request, numberCompMove)
+        console.log(`Computer move: ${moves[compMove]}`)
+        getWinner(moves, request, compMove)
         console.log(`HMAC: ${secretKey}`)
     }
 }

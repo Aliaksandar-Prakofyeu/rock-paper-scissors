@@ -1,9 +1,9 @@
 
-const getWinner = (moves, request, numberCompMove) => {
-    const win = +request - 1 - numberCompMove > 0 && +request - 1 - numberCompMove < moves.length / 2
-    const lose = numberCompMove - +request + 1 > 0 && numberCompMove - +request + 1 > moves.length / 2
+const getWinner = (moves, request, compMove) => {
+    const win = +request - 1 - compMove > 0 && +request - 1 - compMove < moves.length / 2
+    const lose = compMove - +request + 1 > 0 && compMove - +request + 1 > moves.length / 2
 
-    if (+request - 1 === numberCompMove) {
+    if (+request - 1 === compMove) {
         console.log('Draw!')
     } else if (win || lose) {
         console.log('You Win!')
