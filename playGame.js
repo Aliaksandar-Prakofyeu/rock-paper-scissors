@@ -7,7 +7,7 @@ const ecdh = createECDH('secp256k1')
 const secretKey = ecdh.generateKeys('hex')
 const moves = process.argv.slice(2)
 
-const playGame = () => {
+const play = () => {
     if (validateInput(moves)) {
         const numberCompMove = randomInt(0, moves.length)
         const hmac = createHmac('SHA3-256', secretKey).update(moves[numberCompMove]).digest('hex')
@@ -21,6 +21,6 @@ const playGame = () => {
     }
 }
 
-playGame()
+play()
 
 
