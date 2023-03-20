@@ -3,11 +3,12 @@ require('console.table')
 
 const getTable = (moves) => {
     let result = []
-    let a = ['Draw']
-    let b = Math.floor(moves.length / 2)
+    let a = []
+    let b = moves.length / 2
 
     for (let i = 0; i < moves.length; i++) {
-        i <= b ? a[i] = 'Lose' : a[i] = 'Win'
+        a[0] = 'Draw'
+        i > 0 && i < b ? a[i] = 'Lose' : a[i] = 'Win'
     }
 
     for (let i = 0; i < moves.length; i++) {
