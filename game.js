@@ -27,7 +27,6 @@ class Game {
             console.log(`HMAC: ${this.secretKeyHmac}`)
         }
     }
-
 }
 
 const start = new Game()

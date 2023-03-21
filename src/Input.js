@@ -17,7 +17,7 @@ class Input {
             )
             request = prompt('Please enter your choice: ')
             if (request === '?') help.generateTable()
-            if (+request <= this.moves.length && +request > 0) break
+            if (request <= this.moves.length && request > 0) break
             if (+request === 0) break
         }
         return request
